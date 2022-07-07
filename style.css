@@ -1,0 +1,26 @@
+* {
+    box-sizing: border-box;
+}
+
+.column {
+    padding-top: 1%;
+    padding-left: 3%;
+    padding-right: 2%;
+    float: left;
+    width: 50%;
+}
+
+.content {
+    vertical-align: top;
+    font-size: calc(12px + 0.6vw);
+}
+
+.titles {
+    color:rgba(8, 93, 179, 0.897);
+    font-size:calc(12px + 1vw);
+}
+
+.info {
+    vertical-align: top;
+    font-size:calc(8px + 0.6vw);
+}
