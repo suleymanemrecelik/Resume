@@ -1,7 +1,22 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta name="viewport" content="width=1024">
+        <script>
+            function getCookie(cookie_name) {
+                cookie_name += "=";
+                var cookie = document.cookie.split(';');
+                for(var i=0; i<cookie.length; i++) {
+                    var c = cookie[i];
+                    while(c.charAt(0)==' ') c = c.substring(1);
+                    if(c.indexOf(cookie_name) == 0) return c.substring(cookie_name.length,c.length);
+                }              
+            }
+
+            var view_mode = getCookie("view-mode");
+            if(view_mode == "desktop") viewport.setAttribute("content", "width=1024"); 
+            else if(view_mode == "mobile") viewport.setAttribute("content", "width=device-width, initial-scale=1, maximum-scale=1");
+        </script>
+
         <link rel="stylesheet" href="style.css">
     </head>
 
